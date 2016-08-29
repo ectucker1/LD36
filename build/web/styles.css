@@ -92,7 +92,7 @@ h3 {
 }
 
 img.rune {
-	width: 20%;
+	width: 30%;
 	height: width;
 	image-rendering: pixelated;
 	image-rendering: -webkit-crisp-edges; // Safari 7+
