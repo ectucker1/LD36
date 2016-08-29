@@ -4,7 +4,7 @@ enemies:
     health: 25
     damage: 10
     speed: 100
-    texture: [Goblin1.png] #TODO Goblin Textures
+    texture: [Goblin_1.png, Goblin_2.png, Goblin_3.png, Goblin_4.png]
     animSpeed: 5
     attackSfx: sound/Goblin_Wall_Hit.wav
     deathSfx: sound/Goblin_Death.wav
@@ -13,7 +13,7 @@ enemies:
     health: 40
     damage: 20
     speed: 120
-    texture: [Goblin2.png] #TODO Goblin Textures
+    texture: [GoblinSword1.png, GoblinSword2.png, GoblinSword3.png, GoblinSword4.png]
     animSpeed: 5
     attackSfx: sound/Goblin_Wall_Hit.wav
     deathSfx: sound/Goblin_Death.wav
@@ -58,7 +58,7 @@ enemies:
     health: 50
     damage: 25
     speed: 150
-    texture: [Goblin3.png] #TODO Goblin Textures
+    texture: [Goblin3_1.png, Goblin3_2.png, Goblin3_3.png, Goblin3_4.png]
     animSpeed: 5
     attackSfx: sound/Goblin_Wall_Hit.wav
     deathSfx: sound/Goblin_Death.wav
