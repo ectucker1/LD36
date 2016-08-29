@@ -1,0 +1,526 @@
+enemies:
+  - name: Goblin1
+    type: enemy
+    health: 25
+    damage: 10
+    speed: 100
+    texture: [Goblin1.png] #TODO Goblin Textures
+    animSpeed: 5
+    attackSfx: sound/Goblin_Wall_Hit.wav
+    deathSfx: sound/Goblin_Death.wav
+  - name: Goblin2
+    type: enemy
+    health: 40
+    damage: 20
+    speed: 120
+    texture: [Goblin2.png] #TODO Goblin Textures
+    animSpeed: 5
+    attackSfx: sound/Goblin_Wall_Hit.wav
+    deathSfx: sound/Goblin_Death.wav
+  - name: Slime
+    type: enemy
+    health: 30
+    damage: 10
+    speed: 75
+    texture: [Slime_1.png]
+    animSpeed: 5
+    attackSfx: sound/Goblin_Wall_Hit.wav
+    deathSfx: sound/Goblin_Death.wav
+  - name: Ogre
+    type: enemy
+    health: 75
+    damage: 50
+    speed: 50
+    texture: [Giant_1.png, Giant_2.png, Giant_3.png, Giant_4.png]
+    animSpeed: 1
+    attackSfx: sound/Giant_Wall_Hit.wav
+    deathSfx: sound/Giant_Death.wav
+  - name: peasent
+    type: enemy
+    health: 20
+    damage: 20
+    speed: 130
+    texture: [Walk_1.png, Walk_2.png, Walk_3.png, Walk_4.png]
+    animSpeed: 4
+    attackSfx: sound/Peasant_Wall_Hit.wav
+    deathSfx: sound/Peasant_Death.wav
+  - name: mole
+    type: enemy
+    health: 30
+    damage: 50
+    speed: 130
+    texture: [Mole_1.png, Mole_2.png]
+    animSpeed: 3
+    attackSfx: sound/Mole_Wall_Hit.wav
+    deathSfx: sound/Mole_Death.wav
+  - name: Goblin3
+    type: enemy
+    health: 50
+    damage: 25
+    speed: 150
+    texture: [Goblin3.png] #TODO Goblin Textures
+    animSpeed: 5
+    attackSfx: sound/Goblin_Wall_Hit.wav
+    deathSfx: sound/Goblin_Death.wav
+  - name: barrel
+    type: enemy
+    health: 10
+    damage: 50
+    speed: 200
+    texture: [Barrel_1.png, Barrel_2.png, Barrel_3.png, Barrel_4.png, Barrel_6.png, Barrel_7.png, Barrel_8.png, Barrel_9.png]
+    animSpeed: 9
+    attackSfx: sound/Barel_Wall_Hit.wav
+    deathSfx: sound/Barel_Death.wav
+  - name: knight
+    type: enemy
+    health: 100
+    damage: 50
+    speed: 100
+    texture: [Knight1.png, Knight2.png, Knight3.png, Knight4.png]
+    animSpeed: 5
+    attackSfx: sound/Knight_Wall_Hit.wav
+    deathSfx: sound/Knight_Death.wav
+  - name: zombie
+    type: enemy
+    health: 75
+    damage: 25
+    speed: 100
+    texture: [Zombie_1.png, Zombie_2.png, Zombie_3.png, Zombie_4.png] #TODO Goblin Textures
+    animSpeed: 4
+    attackSfx: sound/Zombie_Wall_Hit.wav
+    deathSfx: sound/Zombie_Death.wav
+  - name: Ogre2
+    type: enemy
+    health: 200
+    damage: 50
+    speed: 50
+    texture: [Giant2_1.png, Giant2_2.png, Giant2_3.png, Giant2_4.png]
+    animSpeed: 1
+    attackSfx: sound/Giant_Wall_Hit.wav
+    deathSfx: sound/Giant_Death.wav
+  - name: Ogre3
+    type: enemy
+    health: 300
+    danage: 75
+    speed: 50
+    texture: [Giant_1.png, Giant_2.png, Giant_3.png, Giant_4.png]
+    animSpeed: 1
+    attackSfx: sound/Giant_Wall_Hit.wav
+    deathSfx: sound/Giant_Death.wav
+
+numWaves: 10
+waves:
+  - wave: 1
+    enemies:
+     - type: Slime
+       time: 1
+     - type: Slime
+       time: 2
+     - type: Slime
+       time: 3
+     - type: Goblin1
+       time: 5
+     - type: Goblin1
+       time: 8
+     - type: Slime
+       time: 15
+     - type: Goblin2
+       time: 16
+     - type: Goblin1
+       time: 18
+     - type: Slime
+       time: 25
+     - type: Goblin2
+       time: 30
+     - type: Goblin1
+       time: 31
+     - type: Goblin1
+       time: 32
+  - wave: 2
+    enemies:
+      - type: Goblin2
+        time: 1
+      - type: Slime
+        time: 1.5
+      - type: Goblin2
+        time: 2
+      - type: Goblin2
+        time: 5
+      - type: Goblin1
+        time: 5.5
+      - type: Slime
+        time: 6
+      - type: Goblin2
+        time: 10
+      - type: mole
+        time: 10.5
+      - type: Ogre
+        time: 12
+      - type: Goblin1
+        time: 13
+      - type: mole
+        time: 14
+      - type: Slime
+        time: 15
+      - type: Slime
+        time: 15.5
+      - type: Goblin3
+        time: 16
+      - type: Goblin3
+        time: 18
+  - wave: 3
+    enemies:
+      - type: Ogre
+        time: 1
+      - type: barrel
+        time: 3
+      - type: Goblin1
+        time: 3.5
+      - type: Goblin2
+        time: 4
+      - type: Goblin3
+        time: 5
+      - type: mole
+        time: 5.1
+      - type: peasent
+        time: 6
+      - type: peasent
+        time: 7
+      - type: peasent
+        time: 8
+      - type: Ogre
+        time: 10
+      - type: barrel
+        time: 10.1
+      - type: Goblin3
+        time: 15
+      - type: Slime
+        time: 16
+      - type: Goblin2
+        time: 17
+      - type: Goblin1
+        time: 17.1
+  - wave: 4
+    enemies:
+      - type: barrel
+        time: 1
+      - type: Ogre
+        time: 1.5
+      - type: barrel
+        time: 2
+      - type: Ogre
+        time: 2.5
+      - type: barrel
+        time: 3
+      - type: barrel
+        time: 4
+      - type: Goblin3
+        time: 4.5
+      - type: barrel
+        time: 5
+      - type: barrel
+        time: 6
+      - type: barrel
+        time: 7
+      - type: Goblin3
+        time: 7.8
+      - type: barrel
+        time: 8
+      - type: barrel
+        time: 9
+      - type: barrel
+        time: 10
+      - type: barrel
+        time: 11
+      - type: zombie
+        time: 12
+      - type: zombie
+        time: 13
+      - type: zombie
+        time: 14
+      - type: zombie
+        time: 15
+      - type: zombie
+        time: 16
+  - wave: 5
+    enemies:
+      - type: knight
+        time: 1
+      - type: peasent
+        time: 2
+      - type: Goblin3
+        time: 3
+      - type: knight
+        time: 4
+      - type: peasent
+        time: 4
+      - type: Goblin3
+        time: 6
+      - type: knight
+        time: 7
+      - type: Ogre
+        time: 8
+      - type: Goblin3
+        time: 9
+      - type: mole
+        time: 10
+      - type: peasent
+        time: 11
+      - type: Goblin3
+        time: 12
+      - type: Ogre
+        time: 13
+      - type: barrel
+        time: 14
+  - wave: 6
+    enemies:
+      - type: Slime
+        time: 1
+      - type: barrel
+        time: 2
+      - type: mole
+        time: 2.1
+      - type: Goblin1
+        time: 2.5
+      - type: Ogre2
+        time: 3
+      - type: barrel
+        time: 3.1
+      - type: barrel
+        time: 3.5
+      - type: Goblin3
+        time: 4
+      - type: Ogre
+        time: 4.5
+      - type: knight
+        time: 5
+      - type: zombie
+        time: 8
+      - type: barrel
+        time: 9
+      - type: mole
+        time: 9.1
+      - type: knight
+        time: 10
+  - wave: 7
+    enemies:
+      - type: Ogre2
+        time: 1
+      - type: Ogre2
+        time: 3
+      - type: Ogre2
+        time: 5
+      - type: zombie
+        time: 5.2
+      - type: zombie
+        time: 5.4
+      - type: zombie
+        time: 5.6
+      - type: zombie
+        time: 5.8
+      - type: zombie
+        time: 6
+      - type: barrel
+        time: 6.1
+      - type: mole
+        time: 8
+      - type: peasent
+        time: 9
+      - type: knight
+        time: 10
+      - type: barrel
+        time: 10.1
+  - wave: 8
+    enemies:
+      - type: Ogre
+        time: 1
+      - type: Ogre2
+        time: 2
+      - type: Ogre3
+        time: 3
+      - type: barrel
+        time: 3.1
+      - type: barrel
+        time: 3.3
+      - type: barrel
+        time: 3.5
+      - type: barrel
+        time: 3.7
+      - type: barrel
+        time: 3.9
+      - type: barrel
+        time: 4
+      - type: barrel
+        time: 4.2
+      - type: barrel
+        time: 4.5
+      - type: barrel
+        time: 5
+      - type: knight
+        time: 6
+      - type: Slime
+        time: 7
+      - type: Slime
+        time: 7.1
+      - type: Slime
+        time: 7.2
+      - type: Slime
+        time: 7.3
+      - type: Slime
+        time: 7.4
+      - type: Slime
+        time: 7.5
+      - type: Slime
+        time: 7.6
+      - type: Slime
+        time: 7.7
+      - type: Slime
+        time: 7.8
+      - type: barrel
+        time: 8
+      - type: knight
+        time: 9
+      - type: Ogre3
+        time: 10
+  - wave: 9
+    enemies:
+      - type: Ogre3
+        time: 1
+      - type: zombie
+        time: 2
+      - type: knight
+        time: 3
+      - type: peasent
+        time: 4
+      - type: Slime
+        time: 5
+      - type: Ogre2
+        time: 6
+      - type: Ogre3
+        time: 7
+      - type: Slime
+        time: 8
+      - type: barrel
+        time: 9
+      - type: mole
+        time: 10
+      - type: goblin3
+        time: 11
+      - type: goblin3
+        time: 12
+      - type: knight
+        time: 13
+  - wave: 10
+    enemies:
+      - type: Goblin3
+        time: 1
+      - type: Goblin2
+        time: 1.1
+      - type: knight
+        time: 1.2
+      - type: mole
+        time: 1.3
+      - type: Ogre3
+        time: 1.4
+      - type: Goblin3
+        time: 1.5
+      - type: Goblin2
+        time: 1.6
+      - type: knight
+        time: 1.7
+      - type: mole
+        time: 1.8
+      - type: Ogre3
+        time: 1.9
+      - type: Goblin3
+        time: 2
+      - type: Goblin2
+        time: 2.1
+      - type: knight
+        time: 2.2
+      - type: mole
+        time: 2.3
+      - type: Ogre3
+        time: 2.4
+      - type: Goblin3
+        time: 2.5
+      - type: Goblin2
+        time: 2.6
+      - type: knight
+        time: 2.8
+      - type: mole
+        time: 2.9
+      - type: Ogre3
+        time: 3
+      - type: Ogre2
+        time: 3.3
+      - type: zombie
+        time: 3.6
+      - type: Goblin3
+        time: 3.9
+      - type: Goblin1
+        time: 4.6
+      - type: Goblin2
+        time: 4.7
+      - type: Goblin3
+        time: 4.8
+      - type: Ogre3
+        time: 5
+      - type: barrel
+        time: 5.1
+      - type: barrel
+        time: 5.3
+      - type: barrel
+        time: 5.7
+      - type: barrel
+        time: 5.8
+      - type: barrel
+        time: 6.4
+      - type: barrel
+        time: 6.7
+      - type: barrel
+        time: 7
+      - type: barrel
+        time: 7.1
+      - type: barrel
+        time: 7.8
+      - type: Slime
+        time: 10
+      - type: Slime
+        time: 11
+      - type: Slime
+        time: 12
+      - type: Ogre2
+        time: 13
+      - type: Ogre3
+        time: 13.5
+      - type: Ogre2
+        time: 14
+      - type: Ogre3
+        time: 14.5
+      - type: Ogre2
+        time: 15
+      - type: Ogre3
+        time: 15.5
+      - type: Ogre2
+        time: 16
+      - type: Ogre3
+        time: 16.5
+      - type: Ogre2
+        time: 17
+      - type: Ogre3
+        time: 17.5
+
+
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+        

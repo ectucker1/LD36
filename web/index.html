@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2016, Ethan T. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/google/stagehand">
+    <title>Runes of the Ancients</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="packages/browser/dart.js"></script>
+</head>
+
+<body>
+<script defer src="game.dart" type="application/dart"></script>
+<canvas id="draw-canvas" style="border: none;"></canvas>
+<div class="overlay" id="loading">
+    <h1>Loading... Please Wait</h1>
+</div>
+<div class="overlay" id="combat">
+    <h2 id="waveCount" class="count">Wave: 1 / 10</h2>
+    <h1 id="message" class="message">Wave 1 Begins!</h1>
+</div>
+<div class="overlay" id="upgrade">
+    <div id="runes">
+        <h2 style="text-align: center;">Upon exploration, you find three runes.</h2>
+        <ul>
+            <li id="rune0">
+                <h3 id="runeDesc0">Damage</h3>
+                <img class="rune" src="art/runes/Ruin_Power.png" id="runeImg0">
+            </li>
+            <li id="rune1">
+                <h3 id="runeDesc1">Rate of Fire</h3>
+                <img class="rune" src="art/runes/Ruin_Rate_of_Fire.png" id="runeImg1">
+            </li>
+            <li id="rune2">
+                <h3 id="runeDesc2">Poison</h3>
+                <img  class="rune" src="art/runes/Ruin_Poision.png" id="runeImg2">
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

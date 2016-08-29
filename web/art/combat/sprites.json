@@ -1,0 +1,270 @@
+{
+"frames": {
+	"Archer_1.png": {
+		"frame": {"x":544, "y":80, "w":28, "h":43},
+		"spriteSourceSize": {"x":0,"y":0,"w":28,"h":43},
+		"sourceSize": {"w":28,"h":43}
+	},
+	"Archer_2.png": {
+		"frame": {"x":514, "y":80, "w":28, "h":43},
+		"spriteSourceSize": {"x":0,"y":0,"w":28,"h":43},
+		"sourceSize": {"w":28,"h":43}
+	},
+	"Archer_3.png": {
+		"frame": {"x":604, "y":80, "w":28, "h":43},
+		"spriteSourceSize": {"x":0,"y":0,"w":28,"h":43},
+		"sourceSize": {"w":28,"h":43}
+	},
+	"Archer_4.png": {
+		"frame": {"x":574, "y":80, "w":28, "h":43},
+		"spriteSourceSize": {"x":0,"y":0,"w":28,"h":43},
+		"sourceSize": {"w":28,"h":43}
+	},
+	"Arrow.png": {
+		"frame": {"x":0, "y":123, "w":14, "h":3},
+		"spriteSourceSize": {"x":0,"y":1,"w":14,"h":5},
+		"sourceSize": {"w":14,"h":5}
+	},
+	"Backround.png": {
+		"frame": {"x":0, "y":0, "w":512, "h":96},
+		"spriteSourceSize": {"x":0,"y":0,"w":512,"h":96},
+		"sourceSize": {"w":512,"h":96}
+	},
+	"Barrel_1.png": {
+		"frame": {"x":237, "y":98, "w":18, "h":18},
+		"spriteSourceSize": {"x":0,"y":0,"w":18,"h":18},
+		"sourceSize": {"w":18,"h":18}
+	},
+	"Barrel_2.png": {
+		"frame": {"x":196, "y":98, "w":19, "h":19},
+		"spriteSourceSize": {"x":0,"y":0,"w":19,"h":19},
+		"sourceSize": {"w":19,"h":19}
+	},
+	"Barrel_3.png": {
+		"frame": {"x":257, "y":98, "w":18, "h":18},
+		"spriteSourceSize": {"x":0,"y":0,"w":18,"h":18},
+		"sourceSize": {"w":18,"h":18}
+	},
+	"Barrel_4.png": {
+		"frame": {"x":154, "y":98, "w":19, "h":19},
+		"spriteSourceSize": {"x":0,"y":0,"w":19,"h":19},
+		"sourceSize": {"w":19,"h":19}
+	},
+	"Barrel_6.png": {
+		"frame": {"x":217, "y":98, "w":18, "h":18},
+		"spriteSourceSize": {"x":0,"y":0,"w":18,"h":18},
+		"sourceSize": {"w":18,"h":18}
+	},
+	"Barrel_7.png": {
+		"frame": {"x":133, "y":98, "w":19, "h":19},
+		"spriteSourceSize": {"x":0,"y":0,"w":19,"h":19},
+		"sourceSize": {"w":19,"h":19}
+	},
+	"Barrel_8.png": {
+		"frame": {"x":277, "y":98, "w":18, "h":18},
+		"spriteSourceSize": {"x":0,"y":0,"w":18,"h":18},
+		"sourceSize": {"w":18,"h":18}
+	},
+	"Barrel_9.png": {
+		"frame": {"x":175, "y":98, "w":19, "h":19},
+		"spriteSourceSize": {"x":0,"y":0,"w":19,"h":19},
+		"sourceSize": {"w":19,"h":19}
+	},
+	"Dig_1.png": {
+		"frame": {"x":0, "y":117, "w":21, "h":4},
+		"spriteSourceSize": {"x":5,"y":28,"w":32,"h":32},
+		"sourceSize": {"w":32,"h":32}
+	},
+	"Dig_2.png": {
+		"frame": {"x":23, "y":117, "w":21, "h":4},
+		"spriteSourceSize": {"x":5,"y":28,"w":32,"h":32},
+		"sourceSize": {"w":32,"h":32}
+	},
+	"Giant2_1.png": {
+		"frame": {"x":600, "y":0, "w":41, "h":78},
+		"spriteSourceSize": {"x":0,"y":0,"w":42,"h":78},
+		"sourceSize": {"w":42,"h":78}
+	},
+	"Giant2_2.png": {
+		"frame": {"x":686, "y":0, "w":39, "h":76},
+		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":76},
+		"sourceSize": {"w":40,"h":76}
+	},
+	"Giant2_3.png": {
+		"frame": {"x":557, "y":0, "w":41, "h":78},
+		"spriteSourceSize": {"x":0,"y":0,"w":42,"h":78},
+		"sourceSize": {"w":42,"h":78}
+	},
+	"Giant2_4.png": {
+		"frame": {"x":686, "y":0, "w":39, "h":76},
+		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":76},
+		"sourceSize": {"w":40,"h":76}
+	},
+	"Giant_1.png": {
+		"frame": {"x":643, "y":0, "w":41, "h":78},
+		"spriteSourceSize": {"x":0,"y":0,"w":42,"h":78},
+		"sourceSize": {"w":42,"h":78}
+	},
+	"Giant_2.png": {
+		"frame": {"x":727, "y":0, "w":39, "h":76},
+		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":76},
+		"sourceSize": {"w":40,"h":76}
+	},
+	"Giant_3.png": {
+		"frame": {"x":514, "y":0, "w":41, "h":78},
+		"spriteSourceSize": {"x":0,"y":0,"w":42,"h":78},
+		"sourceSize": {"w":42,"h":78}
+	},
+	"Giant_4.png": {
+		"frame": {"x":727, "y":0, "w":39, "h":76},
+		"spriteSourceSize": {"x":0,"y":0,"w":40,"h":76},
+		"sourceSize": {"w":40,"h":76}
+	},
+	"Goblin1.png": {
+		"frame": {"x":966, "y":0, "w":18, "h":32},
+		"spriteSourceSize": {"x":1,"y":0,"w":32,"h":32},
+		"sourceSize": {"w":32,"h":32}
+	},
+	"Goblin2.png": {
+		"frame": {"x":944, "y":40, "w":20, "h":32},
+		"spriteSourceSize": {"x":1,"y":0,"w":32,"h":32},
+		"sourceSize": {"w":32,"h":32}
+	},
+	"Goblin3.png": {
+		"frame": {"x":772, "y":62, "w":21, "h":32},
+		"spriteSourceSize": {"x":4,"y":0,"w":32,"h":32},
+		"sourceSize": {"w":32,"h":32}
+	},
+	"Knight1.png": {
+		"frame": {"x":922, "y":0, "w":20, "h":38},
+		"spriteSourceSize": {"x":0,"y":0,"w":20,"h":38},
+		"sourceSize": {"w":20,"h":38}
+	},
+	"Knight2.png": {
+		"frame": {"x":657, "y":80, "w":21, "h":39},
+		"spriteSourceSize": {"x":0,"y":0,"w":21,"h":39},
+		"sourceSize": {"w":21,"h":39}
+	},
+	"Knight3.png": {
+		"frame": {"x":922, "y":0, "w":20, "h":38},
+		"spriteSourceSize": {"x":0,"y":0,"w":20,"h":38},
+		"sourceSize": {"w":20,"h":38}
+	},
+	"Knight4.png": {
+		"frame": {"x":749, "y":78, "w":21, "h":39},
+		"spriteSourceSize": {"x":0,"y":0,"w":21,"h":39},
+		"sourceSize": {"w":21,"h":39}
+	},
+	"Mole_1.png": {
+		"frame": {"x":84, "y":98, "w":23, "h":17},
+		"spriteSourceSize": {"x":0,"y":0,"w":23,"h":17},
+		"sourceSize": {"w":23,"h":17}
+	},
+	"Mole_2.png": {
+		"frame": {"x":59, "y":98, "w":23, "h":16},
+		"spriteSourceSize": {"x":0,"y":0,"w":23,"h":16},
+		"sourceSize": {"w":23,"h":16}
+	},
+	"Mole_dig.png": {
+		"frame": {"x":34, "y":98, "w":23, "h":16},
+		"spriteSourceSize": {"x":0,"y":0,"w":23,"h":16},
+		"sourceSize": {"w":23,"h":16}
+	},
+	"Ogre.png": {
+		"frame": {"x":768, "y":0, "w":32, "h":60},
+		"spriteSourceSize": {"x":0,"y":4,"w":32,"h":64},
+		"sourceSize": {"w":32,"h":64}
+	},
+	"Slime_1.png": {
+		"frame": {"x":109, "y":98, "w":22, "h":15},
+		"spriteSourceSize": {"x":5,"y":16,"w":32,"h":32},
+		"sourceSize": {"w":32,"h":32}
+	},
+	"Walk_1.png": {
+		"frame": {"x":634, "y":80, "w":21, "h":39},
+		"spriteSourceSize": {"x":0,"y":0,"w":21,"h":39},
+		"sourceSize": {"w":21,"h":39}
+	},
+	"Walk_2.png": {
+		"frame": {"x":922, "y":40, "w":20, "h":38},
+		"spriteSourceSize": {"x":0,"y":0,"w":20,"h":38},
+		"sourceSize": {"w":20,"h":38}
+	},
+	"Walk_3.png": {
+		"frame": {"x":680, "y":80, "w":21, "h":39},
+		"spriteSourceSize": {"x":0,"y":0,"w":21,"h":39},
+		"sourceSize": {"w":21,"h":39}
+	},
+	"Walk_4.png": {
+		"frame": {"x":922, "y":80, "w":20, "h":38},
+		"spriteSourceSize": {"x":0,"y":0,"w":20,"h":38},
+		"sourceSize": {"w":20,"h":38}
+	},
+	"Zombie_1.png": {
+		"frame": {"x":703, "y":78, "w":21, "h":39},
+		"spriteSourceSize": {"x":0,"y":0,"w":21,"h":39},
+		"sourceSize": {"w":21,"h":39}
+	},
+	"Zombie_2.png": {
+		"frame": {"x":944, "y":0, "w":20, "h":38},
+		"spriteSourceSize": {"x":0,"y":0,"w":20,"h":38},
+		"sourceSize": {"w":20,"h":38}
+	},
+	"Zombie_3.png": {
+		"frame": {"x":726, "y":78, "w":21, "h":39},
+		"spriteSourceSize": {"x":0,"y":0,"w":21,"h":39},
+		"sourceSize": {"w":21,"h":39}
+	},
+	"Zombie_4.png": {
+		"frame": {"x":944, "y":74, "w":20, "h":38},
+		"spriteSourceSize": {"x":0,"y":0,"w":20,"h":38},
+		"sourceSize": {"w":20,"h":38}
+	},
+	"bow_1.png": {
+		"frame": {"x":310, "y":98, "w":7, "h":24},
+		"spriteSourceSize": {"x":0,"y":0,"w":7,"h":24},
+		"sourceSize": {"w":7,"h":24}
+	},
+	"bow_2.png": {
+		"frame": {"x":297, "y":98, "w":11, "h":22},
+		"spriteSourceSize": {"x":0,"y":0,"w":11,"h":22},
+		"sourceSize": {"w":11,"h":22}
+	},
+	"ground_1.png": {
+		"frame": {"x":0, "y":102, "w":32, "h":8},
+		"spriteSourceSize": {"x":0,"y":24,"w":32,"h":32},
+		"sourceSize": {"w":32,"h":32}
+	},
+	"healthbar.png": {
+		"frame": {"x":0, "y":98, "w":32, "h":2},
+		"spriteSourceSize": {"x":0,"y":0,"w":32,"h":2},
+		"sourceSize": {"w":32,"h":2}
+	},
+	"wall_1.png": {
+		"frame": {"x":892, "y":0, "w":28, "h":93},
+		"spriteSourceSize": {"x":0,"y":3,"w":32,"h":96},
+		"sourceSize": {"w":32,"h":96}
+	},
+	"wall_2.png": {
+		"frame": {"x":802, "y":0, "w":28, "h":94},
+		"spriteSourceSize": {"x":0,"y":2,"w":32,"h":96},
+		"sourceSize": {"w":32,"h":96}
+	},
+	"wall_3.png": {
+		"frame": {"x":862, "y":0, "w":28, "h":93},
+		"spriteSourceSize": {"x":0,"y":3,"w":32,"h":96},
+		"sourceSize": {"w":32,"h":96}
+	},
+	"wall_4.png": {
+		"frame": {"x":832, "y":0, "w":28, "h":93},
+		"spriteSourceSize": {"x":0,"y":3,"w":32,"h":96},
+		"sourceSize": {"w":32,"h":96}
+	}
+
+},
+"meta": {
+	"image": "sprites.png",
+	"size": {"w": 1024, "h": 128},
+	"scale": "1"
+}
+}
