@@ -24,8 +24,8 @@ enemies:
     speed: 100
     texture: [Slime_1.png]
     animSpeed: 5
-    attackSfx: sound/Goblin_Wall_Hit.wav
-    deathSfx: sound/Goblin_Death.wav
+    attackSfx: sound/Slime_Wall_Hit.wav
+    deathSfx: sound/Slime_Death.wav
   - name: Ogre
     type: enemy
     health: 100
@@ -55,9 +55,9 @@ enemies:
     deathSfx: sound/Mole_Death.wav
   - name: Goblin3
     type: enemy
-    health: 750
+    health: 75
     damage: 25
-    speed: 175
+    speed: 125
     texture: [Goblin3_1.png, Goblin3_2.png, Goblin3_3.png, Goblin3_4.png]
     animSpeed: 5
     attackSfx: sound/Goblin_Wall_Hit.wav
@@ -85,7 +85,7 @@ enemies:
     health: 150
     damage: 25
     speed: 100
-    texture: [Zombie_1.png, Zombie_2.png, Zombie_3.png, Zombie_4.png] #TODO Goblin Textures
+    texture: [Zombie_1.png, Zombie_2.png, Zombie_3.png, Zombie_4.png]
     animSpeed: 4
     attackSfx: sound/Zombie_Wall_Hit.wav
     deathSfx: sound/Zombie_Death.wav
