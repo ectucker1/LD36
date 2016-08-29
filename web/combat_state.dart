@@ -37,7 +37,7 @@ class CombatState extends State {
   List<Enemy> toRemoveE = [];
   List<Arrow> toRemoveA = [];
 
-  int currentWave = 9;
+  int currentWave = 0;
   bool upgrading = false;
 
   Player player = new Player();

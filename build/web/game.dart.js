@@ -3037,7 +3037,7 @@ this.k2=$.y.a.h(0,"sound/World.wav")
 this.k4=$.y.a.h(0,"sound/Boss.wav")
 this.cj()},
 w:{
-iM:function(a){var z=new Y.iL(a,null,null,1,1,null,null,null,null,null,0,null,null,0,null,100,[],[],9,!1,new Q.kc(0,0,1,1,5),null,null,null,null,null,!1)
+iM:function(a){var z=new Y.iL(a,null,null,1,1,null,null,null,null,null,0,null,null,0,null,100,[],[],0,!1,new Q.kc(0,0,1,1,5),null,null,null,null,null,!1)
 z.fW(a)
 return z}}}}],["","",,H,{"^":"",
 aw:function(){return new P.ab("No element")},
