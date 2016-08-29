@@ -1,0 +1,292 @@
+lootChance:
+  - name: Bow
+    chance: 6
+    effects: Fires Arrows
+    type: bow
+    damage: x
+    speed: y
+  - name: Damage
+    chance: 2
+    effects: Increases Damage
+    type: potion
+    damage: x
+  - name: Wall
+    chance: 3
+    effects: Adds Health
+    type: buildable
+    health: 100
+  - name: Spikes
+    chance: 3
+    effects: Causes enemies to take damage
+    type: buildable
+    damage: 10
+  - name: Mud
+    chance: 3
+    effects: Slows enemies
+    type: buildable
+    slow: 5
+  - name: Bomb
+    chance: 3
+    damage: 50
+    type: buildable
+    effects: Explosion of damage
+  - name: pit
+    chance: 3
+    type: buildable
+    effects: Kills one of any enemy
+    damage: 999
+  - name: Speed
+    chance: 2
+    effects: Increase of firing speed
+    type: poiton
+    speed: +10
+  - name: Fire
+    type: arrow
+    chance: 5
+    effects: causes fire damage
+    damage: 10
+    element: fire
+  - name: Poison
+    type: arrow
+    chance: 5
+    effects: causes poision damage
+    damage: 5
+    element: poison
+  - name: Cold
+    type: arrow
+    chance: 5
+    effects: Slows enemies
+    damage: 5
+    element: cold
+  - name: Shock
+    type: arrow
+    chance: 5
+    effects: AOE damage
+    damage: 10
+    element: shock
+  - name: Piercing
+    type: arrow
+    chance: 5
+    effects: goes through enemies
+    damage: 15
+    element: piercing
+  - name: Fire2
+    type: arrow
+    chance: 4
+    effects: causes fire damage
+    damage: 20
+    element: fire
+  - name: Poison2
+    type: arrow
+    chance: 4
+    effects: causes poision damage
+    damage: 10
+    element: poison
+  - name: Cold2
+    type: arrow
+    chance: 4
+    effects: Slows enemies
+    damage: 5
+    element: cold
+  - name: Shock2
+    type: arrow
+    chance: 4
+    effects: AOE damage
+    damage: 15
+    element: shock
+  - name: Piercing2
+    type: arrow
+    chance: 4
+    effects: goes through enemies
+    damage: 20
+    element: piercing
+  - name: Fire3
+    type: arrow
+    chance: 3
+    effects: causes fire damage
+    damage: 30
+    element: fire
+  - name: Poison3
+    type: arrow
+    chance: 3
+    effects: causes poision damage
+    damage: 15
+    element: poison
+  - name: Cold3
+    type: arrow
+    chance: 3
+    effects: Slows enemies
+    damage: 5
+    element: cold
+  - name: Shock3
+    type: arrow
+    chance: 3
+    effects: AOE damage
+    damage: 20
+    element: shock
+  - name: Piercing3
+    type: arrow
+    chance: 3
+    effects: goes through enemies
+    damage: 25
+    element: piercing
+  - name: Fire4
+    type: arrow
+    chance: 2
+    effects: causes fire damage
+    damage: 40
+    element: fire
+  - name: Poison4
+    type: arrow
+    chance: 2
+    effects: causes poision damage
+    damage: 20
+    element: poison
+  - name: Cold4
+    type: arrow
+    chance: 2
+    effects: Slows enemies
+    damage: 5
+    element: cold
+  - name: Shock4
+    type: arrow
+    chance: 2
+    effects: AOE damage
+    damage: 25
+    element: shock
+  - name: Piercing4
+    type: arrow
+    chance: 2
+    effects: goes through enemies
+    damage: 30
+    element: piercing
+  - name: Fire5
+    type: arrow
+    chance: 1
+    damage: 50
+    element: fire
+    effects: causes fire damage
+  - name: Poison5
+    type: arrow
+    chance: 1
+    effects: causes poision damage
+    damage: 25
+    element: poison
+  - name: Cold5
+    type: arrow
+    chance: 1
+    effects: Slows enemies
+    damage: 5
+    element: cold
+  - name: Shock5
+    type: arrow
+    chance: 1
+    effects: AOE damage
+    damage: 30
+    element: shock
+  - name: Piercing5
+    type: arrow
+    chance: 1
+    effects: goes through enemies
+    damage: 35
+    element: piercing
+
+enemies:
+  - name: Goblin1
+    type: enemy
+    health: 20
+    damage: 10
+    speed: 100
+    texture: [Goblin1.png, Goblin2.png]
+    animSpeed: 4
+    attackSfx: sound/Zombie_Wall_Hit.wav
+    deathSfx: sound/Zombie_Death.wav
+  - name: Goblin2
+    type: enemy
+    health: 30
+    damage: 20
+    speed: 120
+    texture: [Goblin2.png, Goblin3.png]
+    animSpeed: 10
+    attackSfx: sound/Zombie_Wall_Hit.wav
+    deathSfx: sound/Zombie_Death.wav
+  - name: Slime
+    type: enemy
+    health: 30
+    damage: 10
+    speed: 75
+    texture: [Slime_1.png]
+    animSpeed: 1
+    attackSfx: sound/Zombie_Wall_Hit.wav
+    deathSfx: sound/Zombie_Death.wav
+  - name: Ogre
+    type: enemy
+    health: 75
+    damage: 50
+    speed: 50
+    texture: [Ogre.png]
+    animSpeed: 1
+    attackSfx: sound/Giant_Wall_Hit.wav
+    deathSfx: sound/Giant_Death.wav
+  - name: mole
+    type: enemy
+    health: 10
+    damage: 25
+    speed: 75
+    texture: [Mole_1.png, Mole_2.png]
+    animSpeed: 4
+    attackSfx: sound/Mole_Wall_Hit.wav
+    deathSfx: sound/Mole_Death.wav
+
+numWaves: 2
+waves:
+  - wave: 1
+    enemies:
+     - type: Slime
+       time: 1
+     - type: Slime
+       time: 2
+     - type: Slime
+       time: 3
+     - type: Goblin1
+       time: 5
+     - type: Goblin1
+       time: 8
+     - type: Slime
+       time: 15
+     - type: Goblin2
+       time: 16
+     - type: Goblin1
+       time: 18
+     - type: Slime
+       time: 25
+     - type: Goblin2
+       time: 30
+     - type: Goblin1
+       time: 31
+     - type: Goblin1
+       time: 32
+  - wave: 2
+    enemies:
+      - type: Goblin2
+        time: 1
+      - type: Slime
+        time: 1.5
+      - type: Goblin2
+        time: 2
+      - type: Goblin2
+        time: 5
+      - type: Goblin1
+        time: 5
+      - type: Slime
+        time: 5
+      - type: Goblin2
+        time: 10
+      - type: mole
+        time: 10
+      - type: Ogre
+        time: 12
+      - type: Goblin1
+        time: 12
+      - type: mole
+        time: 12
