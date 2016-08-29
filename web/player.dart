@@ -6,7 +6,7 @@ class Player {
   num poison = 0;
   num projSpeed = 1;
   num rateOfFire = 1;
-  num damage = 5;
+  num damage = 7;
 
   Player();
 

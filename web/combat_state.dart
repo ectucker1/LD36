@@ -251,6 +251,7 @@ class CombatState extends State {
     bool enemiesLeft = false;
     for(Map enemy in gameData["waves"][currentWave]['enemies']) {
       if(enemy['time'] <= waveTime && !timesPlaced.contains(enemy['time'])) {
+        print(enemy['type']);
         enemies.add(new Enemy.copy(enemyTemplates[enemy['type']]));
         timesPlaced.add(enemy['time']);
       } else if(!timesPlaced.contains(enemy['time'])) {
@@ -282,6 +283,7 @@ class CombatState extends State {
         castleHealth = 100;
       }
       upgrading = true;
+      timesPlaced.clear();
       updateWaveHTML();
     }
   }
@@ -347,7 +349,7 @@ class CombatState extends State {
       arrowLook.y = event.client.y.toDouble();
       turnDrawing();
 
-      drawing.drawback = (drawTime + 1);
+      drawing.drawback = (drawTime + 1) * 2;
       drawTime = 0;
 
       arrows.add(drawing);

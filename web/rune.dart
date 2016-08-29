@@ -16,27 +16,27 @@ class Rune {
     Random rand = new Random();
     switch(rand.nextInt(5)) {
       case 0:
-        fire = rand.nextInt(12) + 1;
+        fire = rand.nextInt(6) + 3;
         description = "+$fire Fire Damage";
         imgSrc = "art/runes/Ruin_Fire.png";
         break;
       case 1:
-        poison = rand.nextInt(12) + 1;
+        poison = rand.nextInt(6) + 3;
         description = "+$poison Poison Damage";
         imgSrc = "art/runes/Ruin_Poision.png";
         break;
       case 2:
-        damage = rand.nextInt(8) + 1;
+        damage = rand.nextInt(5) + 2;
         description = "+$damage Damage";
         imgSrc = "art/runes/Ruin_Power.png";
         break;
       case 3:
-        projSpeed = rand.nextInt(40) + 1;
+        projSpeed = rand.nextInt(20) + 10;
         description = "+$projSpeed% Projectile Speed";
         imgSrc = "art/runes/Ruin_Proj_Speed.png";
         break;
       case 4:
-        rateOfFire = rand.nextInt(40) + 1;
+        rateOfFire = rand.nextInt(20) + 10;
         description = "+$rateOfFire% Draw Speed";
         imgSrc = "art/runes/Ruin_Rate_of_Fire.png";
         break;

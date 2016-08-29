@@ -1,43 +1,43 @@
 enemies:
   - name: Goblin1
     type: enemy
-    health: 25
+    health: 30
     damage: 10
-    speed: 100
+    speed: 110
     texture: [Goblin_1.png, Goblin_2.png, Goblin_3.png, Goblin_4.png]
     animSpeed: 5
     attackSfx: sound/Goblin_Wall_Hit.wav
     deathSfx: sound/Goblin_Death.wav
   - name: Goblin2
     type: enemy
-    health: 40
+    health: 60
     damage: 20
-    speed: 120
+    speed: 130
     texture: [GoblinSword1.png, GoblinSword2.png, GoblinSword3.png, GoblinSword4.png]
     animSpeed: 5
     attackSfx: sound/Goblin_Wall_Hit.wav
     deathSfx: sound/Goblin_Death.wav
   - name: Slime
     type: enemy
-    health: 30
+    health: 50
     damage: 10
-    speed: 75
+    speed: 100
     texture: [Slime_1.png]
     animSpeed: 5
     attackSfx: sound/Goblin_Wall_Hit.wav
     deathSfx: sound/Goblin_Death.wav
   - name: Ogre
     type: enemy
-    health: 75
+    health: 100
     damage: 50
-    speed: 50
+    speed: 75
     texture: [Giant_1.png, Giant_2.png, Giant_3.png, Giant_4.png]
     animSpeed: 1
     attackSfx: sound/Giant_Wall_Hit.wav
     deathSfx: sound/Giant_Death.wav
   - name: peasent
     type: enemy
-    health: 20
+    health: 30
     damage: 20
     speed: 130
     texture: [Walk_1.png, Walk_2.png, Walk_3.png, Walk_4.png]
@@ -46,7 +46,7 @@ enemies:
     deathSfx: sound/Peasant_Death.wav
   - name: mole
     type: enemy
-    health: 30
+    health: 50
     damage: 50
     speed: 130
     texture: [Mole_1.png, Mole_2.png]
@@ -55,9 +55,9 @@ enemies:
     deathSfx: sound/Mole_Death.wav
   - name: Goblin3
     type: enemy
-    health: 50
+    health: 750
     damage: 25
-    speed: 150
+    speed: 175
     texture: [Goblin3_1.png, Goblin3_2.png, Goblin3_3.png, Goblin3_4.png]
     animSpeed: 5
     attackSfx: sound/Goblin_Wall_Hit.wav
@@ -66,23 +66,23 @@ enemies:
     type: enemy
     health: 10
     damage: 50
-    speed: 200
+    speed: 300
     texture: [Barrel_1.png, Barrel_2.png, Barrel_3.png, Barrel_4.png, Barrel_6.png, Barrel_7.png, Barrel_8.png, Barrel_9.png]
     animSpeed: 9
     attackSfx: sound/Barel_Wall_Hit.wav
     deathSfx: sound/Barel_Death.wav
   - name: knight
     type: enemy
-    health: 100
+    health: 150
     damage: 50
-    speed: 100
+    speed: 125
     texture: [Knight1.png, Knight2.png, Knight3.png, Knight4.png]
     animSpeed: 5
     attackSfx: sound/Knight_Wall_Hit.wav
     deathSfx: sound/Knight_Death.wav
   - name: zombie
     type: enemy
-    health: 75
+    health: 150
     damage: 25
     speed: 100
     texture: [Zombie_1.png, Zombie_2.png, Zombie_3.png, Zombie_4.png] #TODO Goblin Textures
@@ -91,9 +91,9 @@ enemies:
     deathSfx: sound/Zombie_Death.wav
   - name: Ogre2
     type: enemy
-    health: 200
+    health: 250
     damage: 50
-    speed: 50
+    speed: 75
     texture: [Giant2_1.png, Giant2_2.png, Giant2_3.png, Giant2_4.png]
     animSpeed: 1
     attackSfx: sound/Giant_Wall_Hit.wav
@@ -102,7 +102,7 @@ enemies:
     type: enemy
     health: 300
     danage: 75
-    speed: 50
+    speed: 75
     texture: [Giant_1.png, Giant_2.png, Giant_3.png, Giant_4.png]
     animSpeed: 1
     attackSfx: sound/Giant_Wall_Hit.wav
@@ -404,9 +404,9 @@ waves:
         time: 9
       - type: mole
         time: 10
-      - type: goblin3
+      - type: Goblin3
         time: 11
-      - type: goblin3
+      - type: Goblin3
         time: 12
       - type: knight
         time: 13
@@ -510,17 +510,3 @@ waves:
         time: 17
       - type: Ogre3
         time: 17.5
-
-
-
-
-        
-
-
-        
-        
-        
-        
-        
-        
-        
