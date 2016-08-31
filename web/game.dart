@@ -74,6 +74,9 @@ class GameStart extends BaseGame {
     assetManager.load("sound/Knight_Wall_Hit.wav", loadGameSound("sound/Knight_Wall_Hit.wav"));
     assetManager.load("sound/Slime_Death.wav", loadGameSound("sound/Slime_Death.wav"));
     assetManager.load("sound/Slime_Wall_Hit.wav", loadGameSound("sound/Slime_Wall_Hit.wav"));
+
+    assetManager.load("sound/Intro_Dialog.wav", loadGameSound("sound/Intro_Dialog.wav"));
+    assetManager.load("sound/End_Dialog.wav", loadGameSound("sound/End_Dialog.wav"));
   }
 
   @override

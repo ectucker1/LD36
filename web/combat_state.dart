@@ -37,7 +37,7 @@ class CombatState extends State {
   List<Enemy> toRemoveE = [];
   List<Arrow> toRemoveA = [];
 
-  int currentWave = 0;
+  int currentWave = 9;
   bool upgrading = false;
 
   Player player = new Player();
@@ -50,6 +50,11 @@ class CombatState extends State {
   Sound finalWave;
 
   bool defeat = false;
+
+  bool started = false;
+  num dialogTime = 0;
+  Sound intro;
+  Sound extro;
 
   CombatState(this.batch) {
     textures = new TexturePack(assetManager.get("art/combat/sprites.png"), assetManager.get("art/combat/sprites.json"));
@@ -93,7 +98,19 @@ class CombatState extends State {
     world = assetManager.get("sound/Epic Orchestra.wav");
     exploring = assetManager.get("sound/World.wav");
     finalWave = assetManager.get("sound/Boss.wav");
-    startWaveMusic();
+
+    intro = assetManager.get("sound/Intro_Dialog.wav");
+    extro = assetManager.get("sound/End_Dialog.wav");
+
+    intro.play();
+    window.onKeyPress.listen(keypress);
+    //startWaveMusic();
+  }
+
+  keypress(KeyboardEvent e) {
+    if(e.keyCode == KeyCode.SPACE) {
+      dialogTime = 50;
+    }
   }
 
   selectRune0(MouseEvent e) {
@@ -184,107 +201,122 @@ class CombatState extends State {
 
   @override
   update(num delta) {
-    turnDrawing();
-    if(drawing != null) {
-      drawTime += delta * player.rateOfFire;
-      if (drawTime > 3) {
-        drawTime = 3;
-        guyFrame = 4;
-        bowFrame = 2;
-      } else {
-        guyFrame = drawTime.floor() + 1;
-        bowFrame = 1;
-      }
-      if (drawing == null) {
-        drawTime = 0;
-      }
-    }
-
-    for(Enemy enemy in enemies) {
-      enemy.update(delta);
-      if(enemy.attack) {
-        castleHealth -= enemy.damage;
-        if(castleHealth <= 0) {
-          castleHealth = 0;
+    if(started) {
+      turnDrawing();
+      if (drawing != null) {
+        drawTime += delta * player.rateOfFire;
+        if (drawTime > 3) {
+          drawTime = 3;
+          guyFrame = 4;
+          bowFrame = 2;
+        } else {
+          guyFrame = drawTime.floor() + 1;
+          bowFrame = 1;
         }
-        enemy.attackSfx.play();
-        toRemoveE.add(enemy);
+        if (drawing == null) {
+          drawTime = 0;
+        }
       }
-    }
-    toRemoveE.add(null);
-    for(Enemy enemy in toRemoveE) {
-      enemies.remove(enemy);
-    }
-    toRemoveE.clear();
 
-    for(Arrow arrowData in arrows) {
-      arrowData.update(delta);
-      if(arrowData.x < 0 || arrowData.y > height || arrowData.x > width) {
-        toRemoveA.add(arrowData);
-      }
-      for(Enemy enemy in enemies) {
-        if(arrowData.bound.intersectsWithObb3(enemy.bound) && !toRemoveA.contains(arrowData) && arrowData.moving) {
-          player.applyToEnemy(enemy, arrowData.drawback);
-          if(enemy.health <= 0) {
-            if(!toRemoveE.contains(enemy)) {
-              enemy.dieSfx.play();
-            }
-            toRemoveE.add(enemy);
+      for (Enemy enemy in enemies) {
+        enemy.update(delta);
+        if (enemy.attack) {
+          castleHealth -= enemy.damage;
+          if (castleHealth <= 0) {
+            castleHealth = 0;
           }
+          enemy.attackSfx.play();
+          toRemoveE.add(enemy);
+        }
+      }
+      toRemoveE.add(null);
+      for (Enemy enemy in toRemoveE) {
+        enemies.remove(enemy);
+      }
+      toRemoveE.clear();
+
+      for (Arrow arrowData in arrows) {
+        arrowData.update(delta);
+        if (arrowData.x < 0 || arrowData.y > height || arrowData.x > width) {
           toRemoveA.add(arrowData);
         }
+        for (Enemy enemy in enemies) {
+          if (arrowData.bound.intersectsWithObb3(enemy.bound) &&
+              !toRemoveA.contains(arrowData) && arrowData.moving) {
+            player.applyToEnemy(enemy, arrowData.drawback);
+            if (enemy.health <= 0) {
+              if (!toRemoveE.contains(enemy)) {
+                enemy.dieSfx.play();
+              }
+              toRemoveE.add(enemy);
+            }
+            toRemoveA.add(arrowData);
+          }
+        }
       }
-    }
 
-    for(Enemy enemy in toRemoveE) {
-      enemies.remove(enemy);
-    }
-    toRemoveE.clear();
-    for(Arrow arrowData in toRemoveA) {
-      arrows.remove(arrowData);
-    }
-    toRemoveA.clear();
-
-    if(!upgrading) {
-      waveTime += delta;
-    }
-    bool enemiesLeft = false;
-    for(Map enemy in gameData["waves"][currentWave]['enemies']) {
-      if(enemy['time'] <= waveTime && !timesPlaced.contains(enemy['time'])) {
-        print(enemy['type']);
-        enemies.add(new Enemy.copy(enemyTemplates[enemy['type']]));
-        timesPlaced.add(enemy['time']);
-      } else if(!timesPlaced.contains(enemy['time'])) {
-        enemiesLeft = true;
+      for (Enemy enemy in toRemoveE) {
+        enemies.remove(enemy);
       }
-    }
-
-    textures['healthbar.png'].setRegionCoords(textures['healthbar.png'].u, textures['healthbar.png'].v, ((castleHealth / 100) * 32).floor() / textures['healthbar.png'].sourceWidth, textures['healthbar.png'].v2);
-    //print(((castleHealth / 100) * 32).floor());
-    if(castleHealth <= 0) {
-      updateWaveHTML();
-      running = false;
-      defeat = true;
-    }
-
-    if(waveTime >= 2 && castleHealth > 0) {
-      Element element = querySelector("#message");
-      element.style.opacity = "0";
-    }
-    if(!enemiesLeft && enemies.isEmpty && !defeat) {
-      world.stop();
-      if(currentWave + 1 < gameData['numWaves']) {
-        exploring.loop();
+      toRemoveE.clear();
+      for (Arrow arrowData in toRemoveA) {
+        arrows.remove(arrowData);
       }
-      waveTime = 0;
-      currentWave++;
-      castleHealth += 50;
-      if(castleHealth > 100) {
-        castleHealth = 100;
+      toRemoveA.clear();
+
+      if (!upgrading) {
+        waveTime += delta;
       }
-      upgrading = true;
-      timesPlaced.clear();
-      updateWaveHTML();
+      bool enemiesLeft = false;
+      for (Map enemy in gameData["waves"][currentWave]['enemies']) {
+        if (enemy['time'] <= waveTime && !timesPlaced.contains(enemy['time'])) {
+          print(enemy['type']);
+          //enemies.add(new Enemy.copy(enemyTemplates[enemy['type']])); //TODO Re-add enemies
+          timesPlaced.add(enemy['time']);
+        } else if (!timesPlaced.contains(enemy['time'])) {
+          enemiesLeft = true;
+        }
+      }
+
+      textures['healthbar.png'].setRegionCoords(
+          textures['healthbar.png'].u, textures['healthbar.png'].v,
+          ((castleHealth / 100) * 32).floor() /
+              textures['healthbar.png'].sourceWidth,
+          textures['healthbar.png'].v2);
+      //print(((castleHealth / 100) * 32).floor());
+      if (castleHealth <= 0) {
+        updateWaveHTML();
+        running = false;
+        defeat = true;
+      }
+
+      if (waveTime >= 2 && castleHealth > 0) {
+        Element element = querySelector("#message");
+        element.style.opacity = "0";
+      }
+      if (!enemiesLeft && enemies.isEmpty && !defeat) {
+        world.stop();
+        finalWave.stop();
+        if (currentWave + 1 < gameData['numWaves']) {
+          exploring.loop();
+        }
+        waveTime = 0;
+        currentWave++;
+        castleHealth += 50;
+        if (castleHealth > 100) {
+          castleHealth = 100;
+        }
+        upgrading = true;
+        timesPlaced.clear();
+        updateWaveHTML();
+      }
+    } else {
+      dialogTime += delta;
+      if (dialogTime > 39) {
+        started = true;
+        intro.stop();
+        startWaveMusic();
+      }
     }
   }
 
@@ -311,6 +343,7 @@ class CombatState extends State {
         message.text = "Victory!";
         waveNum.style.opacity = "0";
         running = false;
+        extro.play();
       }
       if(castleHealth <= 0) {
         message.text = "Defeat";
