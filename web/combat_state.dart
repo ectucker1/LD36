@@ -37,7 +37,7 @@ class CombatState extends State {
   List<Enemy> toRemoveE = [];
   List<Arrow> toRemoveA = [];
 
-  int currentWave = 9;
+  int currentWave = 0;
   bool upgrading = false;
 
   Player player = new Player();
@@ -271,7 +271,7 @@ class CombatState extends State {
       for (Map enemy in gameData["waves"][currentWave]['enemies']) {
         if (enemy['time'] <= waveTime && !timesPlaced.contains(enemy['time'])) {
           print(enemy['type']);
-          //enemies.add(new Enemy.copy(enemyTemplates[enemy['type']])); //TODO Re-add enemies
+          enemies.add(new Enemy.copy(enemyTemplates[enemy['type']])); //TODO Re-add enemies
           timesPlaced.add(enemy['time']);
         } else if (!timesPlaced.contains(enemy['time'])) {
           enemiesLeft = true;

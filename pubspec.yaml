@@ -8,7 +8,7 @@ environment:
   sdk: '>=1.0.0 <2.0.0'
 
 dependencies:
-  dart_to_js_script_rewriter: any
+  dart_to_js_script_rewriter:
   cobblestone:
     git: https://github.com/specialcode/cobblestone.git
   yaml:
