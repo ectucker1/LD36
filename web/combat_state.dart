@@ -12,6 +12,8 @@ class CombatState extends State {
   SpriteBatch batch;
   TexturePack textures;
 
+  PhysboxBatch debug;
+
   num scale;
 
   int guyFrame = 1;
@@ -37,7 +39,7 @@ class CombatState extends State {
   List<Enemy> toRemoveE = [];
   List<Arrow> toRemoveA = [];
 
-  int currentWave = 9;
+  int currentWave = 0;
   bool upgrading = false;
 
   Player player = new Player();
@@ -51,7 +53,10 @@ class CombatState extends State {
 
   bool defeat = false;
 
+  bool debugMode = false;
+
   CombatState(this.batch) {
+    debug = new PhysboxBatch.defaultShader();
     textures = new TexturePack(assetManager.get("art/combat/sprites.png"), assetManager.get("art/combat/sprites.json"));
     scale = height / 200;
 
@@ -103,6 +108,7 @@ class CombatState extends State {
       updateWaveHTML();
       exploring.stop();
       startWaveMusic();
+      unpause();
     }
   }
 
@@ -113,6 +119,7 @@ class CombatState extends State {
       updateWaveHTML();
       exploring.stop();
       startWaveMusic();
+      unpause();
     }
   }
 
@@ -123,6 +130,7 @@ class CombatState extends State {
       updateWaveHTML();
       exploring.stop();
       startWaveMusic();
+      unpause();
     }
   }
 
@@ -175,6 +183,19 @@ class CombatState extends State {
     }
 
     batch.draw(textures['healthbar.png'], 8 * scale, 140 * scale, scaleX: scale, scaleY: scale);
+    batch.end();
+
+    if(debugMode) {
+      debug.projection = fullscreenCamera.combined;
+      debug.begin();
+      for (Arrow arrowData in arrows) {
+        debug.draw2D(arrowData.bound);
+      }
+      for (Enemy enemy in enemies) {
+        debug.draw2D(enemy.bound);
+      }
+      debug.end();
+    }
   }
 
   @override
@@ -223,7 +244,7 @@ class CombatState extends State {
         toRemoveA.add(arrowData);
       }
       for(Enemy enemy in enemies) {
-        if(arrowData.bound.intersectsWithObb3(enemy.bound) && !toRemoveA.contains(arrowData) && arrowData.moving) {
+        if(arrowData.bound.intersectsWithObb3(enemy.bound)  && arrowData.moving) {
           player.applyToEnemy(enemy, arrowData.drawback);
           if(enemy.health <= 0) {
             if(!toRemoveE.contains(enemy)) {
@@ -283,6 +304,7 @@ class CombatState extends State {
       }
       upgrading = true;
       updateWaveHTML();
+      pause();
     }
   }
 
@@ -375,6 +397,12 @@ class CombatState extends State {
     arrowLook.y = event.client.y.toDouble();
   }
 
+  toggleDebug(KeyEvent e) {
+    if(e.keyCode == KeyCode.D) {
+      debugMode = !debugMode;
+    }
+  }
+
   @override
   pause() {
     for(StreamSubscription subscription in subscriptions) {
@@ -387,6 +415,7 @@ class CombatState extends State {
     subscriptions.add(document.onMouseDown.listen(drawArrow));
     subscriptions.add(document.onMouseUp.listen(fireArrow));
     subscriptions.add(document.onMouseMove.listen(turnArrow));
+    subscriptions.add(window.onKeyDown.listen(toggleDebug));
   }
 
 }

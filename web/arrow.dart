@@ -30,7 +30,7 @@ class Arrow {
     velocity = new Vector2.all(0.0);
     angle = angleRad;
     center = new Vector3(x + arrowWidth, y + arrowHeight, 0.0);
-    extents = new Vector3(arrowWidth.toDouble() * scale / 2, arrowHeight.toDouble() * scale / 2, 0.0);
+    extents = new Vector3(arrowWidth.toDouble() / 2, arrowHeight.toDouble() / 2, 10.0);
     bound = new Obb3();
     updateBounds();
   }
@@ -51,6 +51,7 @@ class Arrow {
     bound
       ..center.setFrom(center)
       ..halfExtents.setFrom(extents)
+      ..resetRotation()
       ..rotate(new Matrix3.rotationZ(angleRad));
   }
 

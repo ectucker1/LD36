@@ -88,7 +88,6 @@ class GameStart extends BaseGame {
       case GameMode.FINAL:
         break;
     }
-    batch.end();
   }
 
   @override
